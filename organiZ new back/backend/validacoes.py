@@ -20,7 +20,7 @@ def validar_data_nascimento(dataNascimento):
 
 
 def validar_email(email):
-    # Utilizando uma expressão regular simples para validar o formato do e-mail
+    #utilizando uma expressao regular simples para validar o formato do e-mail
     padrao_email = r'^\S+@\S+\.\S+$'
     if not re.match(padrao_email, email):
         return {'erro': True, 'mensagem': 'E-mail inválido.'}
