@@ -1,0 +1,131 @@
+
+
+.imagem {
+    background-color: rgb(206, 255, 206);
+    display: flex;
+    align-items: center;
+}
+
+.nome2 {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+span {
+    color: green;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#cadastro {
+    font-size: 100px;
+}
+
+* {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    border: none;
+    color: black;
+}
+
+
+input,
+label {
+    display: block;
+    outline: none;
+    width: 100%;
+}
+
+a {
+    color: rgb(30, 160, 30);
+}
+
+main.Content .telaLogin {
+    background: rgb(206, 255, 206);
+    height: 750px;
+}
+
+#main-container {
+    width: 500px;
+    background-color: rgb(156, 255, 156);
+    border-radius: 10px;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-container h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    border-bottom: 2px solid rgb(93, 194, 97);
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: rgb(30, 160, 30);
+}
+
+.botaao {
+    background-color: #3bab35;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+#agreement,
+#agreement-label {
+    display: inline-block;
+    width: auto;
+}
+
+#agreement {
+    margin-right: 5px;
+}
+
+.cor_fundo{
+    background-color: rgb(206, 255, 206);
+    height: 870px;
+}
+
+a.botaao {
+    display: block;
+    margin: 5px 0;
+    text-align: center;
+    padding: 6px;
+}
+
+#btn-submit{
+    background-color: #3bab35;
+    border-bottom: 2px solid rgb(93, 194, 97);
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+#espaço_nome{
+    margin-top: 15px;
+}

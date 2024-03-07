@@ -1,0 +1,110 @@
+/*
+Calendar.css
+giovanna
+ultima alteraçao: 24/11
+*/
+
+/*estiliza a div principal*/
+.calendar {
+    text-align: center;
+    border: 1px solid #ccc;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  /*inicio da personalização funcional do calendario*/
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  
+  .day-of-week {
+    background-color: rgb(71, 172, 71);
+    padding: 8px;
+  }
+  
+  .empty-day {
+    background-color: transparent;
+  }
+  
+  .day {
+    position: relative;
+    padding: 10%;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .day-number {
+    font-weight: bold;
+    font-size: 140%;
+  }
+  
+  .event {
+    background-color: #3bab35;
+    color: white;
+    padding: 4px;
+    margin: 2px;
+  }
+
+  h1{
+    margin: 0;
+  }
+  /*fim da personalização funcional do calendario*/
+
+  /*personalização do titulo*/
+  #tittle-cldr{
+    color: #3bab35;
+    font-size: 50px;
+    padding: 15px;
+  }
+
+  /*inicio da personalização do resto do calendario*/
+  .to_check li ul {
+    position: absolute;
+    left: 0;
+    background-color: white;
+    display: none;
+    bottom: -12px;
+}
+
+.to_check li:hover ul,
+.to_check li.over ul {
+    display: block;
+}
+
+.to_check li ul li {
+  display: block;
+  width: 150px;
+  font-size: 20px;
+  border-radius: none;
+  background-color: none;
+}
+
+#li_button{
+  font-size: 80px;
+  border-radius: 50%;
+  background-color: #3bab35;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+ margin-left: 20px;
+}
+/*fim da personalização do resto do calendario*/

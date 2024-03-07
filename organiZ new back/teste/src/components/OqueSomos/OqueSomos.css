@@ -1,0 +1,38 @@
+#oquesomos {
+    padding-bottom: 55px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.oquesomos {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 21px;
+    margin-right: 50px;
+    border: 2px solid rgb(117, 224, 117);
+    padding-top: 45px;
+    margin-top: 50px;
+    margin-left: 150px;
+    /*padding-bottom: 60px;*/
+}
+
+.lista {
+    margin-top: 40px;
+}
+
+/*dois h1, direção cor e tamanho da letra*/
+.oqs {
+    color: rgb(1, 146, 1);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.oqo {
+    color: rgb(1, 146, 1);
+    margin-top: 20px;
+}
+
+/*tirou a bolinha da frente do texto*/
+li {
+    list-style-type: none;
+}

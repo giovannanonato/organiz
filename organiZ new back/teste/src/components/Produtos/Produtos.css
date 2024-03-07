@@ -1,0 +1,367 @@
+/*organiz css
+/*section home e planos linha de divisao*/
+section {
+    display: flex;
+    border-bottom: 2px solid rgb(117, 224, 117);
+    padding: 3em 0em 0em;
+}
+
+/*body*/
+.fundo {
+    background-image: none;
+}
+
+body {
+    background-color: rgb(251, 252, 255);
+    /*margin: 150px;*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*margin-top: 50px;*/
+    border-bottom: 1px solid rgb(117, 224, 117);
+
+}
+
+/*
+/*z*/
+span {
+    color: rgb(1, 146, 1);
+
+}
+
+/*frase principal*/
+.principal {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    padding-left: 40px;
+    margin-top: 50px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nome {
+    color: black;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+span {
+    color: rgb(21, 88, 21);
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.image {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(71, 172, 71);
+    align-items: center;
+    padding: 0;
+}
+
+.menu {
+    list-style: none;
+    float: right;
+    padding-left: 800px;
+
+}
+
+.menu li {
+    position: relative;
+    float: left;
+    justify-content: space-around;
+    margin: 0 10px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: all ease .4s;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: white;
+    display: none;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+    /*color: rgb(117, 224, 117);*/
+}
+
+.menu li ul li {
+    /*border:1px solid #c0c0c0;*/
+    display: block;
+    width: 150px;
+}
+
+.menu a:hover {
+    color: rgb(117, 224, 117);
+}
+
+/*cor das letras*/
+a {
+    color: rgb(1, 146, 1);
+    text-decoration: none;
+}
+
+/*home*/
+.lista {
+    margin-top: 40px;
+}
+
+#oquesomos {
+    padding-bottom: 55px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.oquesomos {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 21px;
+    margin-right: 50px;
+    border: 2px solid rgb(117, 224, 117);
+    padding-top: 45px;
+    margin-top: 50px;
+    margin-left: 150px;
+    /*padding-bottom: 60px;*/
+}
+
+.oqueoferecemos {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    height: 380px;
+    border: 2px solid rgb(117, 224, 117);
+    margin-top: 70px;
+    padding: 35px;
+
+
+}
+
+/*dois h1, direção cor e tamanho da letra*/
+.oqs {
+    color: rgb(1, 146, 1);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.oqo {
+    color: rgb(1, 146, 1);
+    margin-top: 20px;
+}
+
+/*tirou a bolinha da frente do texto*/
+li {
+    list-style-type: none;
+}
+
+/*planos oferecidos*/
+/*titulo h1*/
+#oqueoferecemos {
+    padding: 40px;
+    padding-top: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.po {
+    margin: 80px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.gratis {
+    margin-top: 0px;
+    padding-left: 140px;
+}
+
+.trintadias {
+    margin-top: 0px;
+    padding-left: 140px;
+}
+
+.trezentos {
+    margin-top: 0px;
+    padding-left: 140px;
+
+
+}
+
+.planofree {
+    border: 2px solid rgb(117, 224, 117);
+    border-radius: 5px;
+    font-size: 18px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(250, 255, 247);
+    color: black;
+    text-align: center;
+    margin-left: 110px;
+    padding-right: 30px;
+    padding-top: 40px;
+
+}
+
+.classfree {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*margin-left: 70px;*/
+    margin-right: 70px;
+    align-items: center;
+}
+
+.classmensal {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*margin-left: 70px;*/
+    margin-right: 70px;
+    align-items: center;
+}
+
+.classanual {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*margin-left: 70px;*/
+    margin-right: 70px;
+    align-items: center;
+
+}
+
+.planomensal {
+    border: 2px solid rgb(117, 224, 117);
+    border-radius: 5px;
+    font-size: 18px;
+    width: 300px;
+    height: 450px;
+    background-color: rgb(250, 255, 247);
+    color: black;
+    text-align: center;
+    margin-left: 150px;
+    padding-right: 30px;
+    padding-top: 40px;
+}
+
+.planoanual {
+    border: 2px solid rgb(117, 224, 117);
+    border-radius: 5px;
+    font-size: 18px;
+    width: 300px;
+    height: 468px;
+    background-color: rgb(250, 255, 247);
+    color: black;
+    text-align: center;
+    margin-left: 150px;
+    padding-right: 30px;
+    padding-top: 40px;
+}
+
+/*section*/
+#pm {
+    margin-top: 3px;
+    margin-left: 35px;
+}
+
+#pa {
+    margin-top: 1px;
+    margin-left: 35px;
+
+}
+
+/*h4 plano mensal*/
+.planom {
+    margin-left: 30px;
+    font-size: 27px;
+    color: rgb(1, 146, 1);
+}
+
+/*bordas nos containers*/
+#planos {
+    border-bottom: 1px solid rgb(117, 224, 117);
+    padding: 40px;
+    display: block;
+}
+
+/*botao cadastrar*/
+.submit_btn {
+    float: left;
+    display: block;
+    padding: 5px 20px;
+    border: none rgb(161, 161, 161);
+    outline: none;
+    background-color: rgb(226, 226, 226);
+    color: rgb(117, 224, 117);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border-radius: 6px;
+    margin: 15px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 100px;
+    text-decoration: none;
+    text-decoration: rgb(117, 224, 117);
+
+}
+
+.submit_btn:hover {
+    background-color: rgb(220, 219, 219);
+    color: rgb(117, 224, 117);
+    transform: scale(1.03);
+}
+
+/*imagem calendario e h1*/
+.calendario {
+    margin-top: 60px;
+    border-radius: 5px;
+}
+
+/*margem na section e direção*/
+#oqueoferecemos {
+    justify-content: space-around;
+
+}
+
+/*h1 produtos título*/
+.prod {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*footer*/
+footer {
+    font-size: 15px;
+    text-align: center;
+}
+
+#planoanual {
+    padding-left: 40px;
+}
+
+#planomen {
+    padding-left: 40px;
+}
+
+#planofree {
+    padding-left: 40px;
+
+}

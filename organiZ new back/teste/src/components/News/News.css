@@ -1,0 +1,145 @@
+/*#div_color {
+  width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100em;
+  background-color: rgb(206, 255, 206);
+}
+
+#div_color {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
+  border: none;
+  color: black;
+}*/
+
+#div_color{
+  background-color: rgb(206, 255, 206);
+}
+
+
+
+
+
+#main-container {
+  width: 500px;
+  background-color: rgb(156, 255, 156);
+  border-radius: 10px;
+  padding: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+  
+  
+}
+
+#main-container h1 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.imagem {
+  background-color: rgb(206, 255, 206);
+  display: flex;
+  align-items: center;
+}
+
+.nome2 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+}
+
+span {
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+}
+
+input,
+label,
+select {
+  display: block;
+  outline: none;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  border-bottom: 2px solid rgb(93, 194, 97);
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+select {
+  border-bottom: 2px solid rgb(93, 194, 97);
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: rgb(30, 160, 30);
+}
+
+input[type="submit"] {
+  background-color: #3bab35;
+  color: #FFF;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+
+input[type="button"] {
+  background-color: #3bab35;
+  color: #FFF;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+
+#even {
+  color: red;
+}
+
+#appo {
+
+  color: rgb(255, 121, 5);
+}
+
+#stud {
+  color: rgb(197, 197, 3);
+}
+
+#prof {
+  color: rgb(3, 147, 3);
+}
+
+#task {
+  color: rgb(0, 89, 255);
+}
+
+.add {
+  border-radius: 50%;
+  background-color: rgb(3, 147, 3);
+  margin: 30px;
+  text-align: left;
+  justify-content: space-around;
+}
+
+.add option {
+  font-size: 60px;
+  color: white;
+}
