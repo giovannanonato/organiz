@@ -77,7 +77,7 @@ const Form = () => {
 
             <div className="half-box spacing">
               <label htmlFor="nome" className="form_label">Nome de usuário</label>
-              <input type="text" name="login" className="form_input" id="login" placeholder="Nome de usuário" required data-required data-min-length="3" data-max-length="40" value={formValues.login} onChange={handleChange} />
+              <input type="text" name="login" className="form_input" id="login" placeholder="Digite seu email" required data-required data-min-length="3" data-max-length="40" value={formValues.login} onChange={handleChange} />
             </div>
 
             <div className="half-box spacing">
