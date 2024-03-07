@@ -115,11 +115,11 @@ const Form = () => {
               <input className="botaao" type="submit" value="Cancelar" />
             </div>
 
-            <div>
+            {/*<div>
               <input type="checkbox" name="agreement" id="agreement" />
               <label htmlFor="agreement" id="agreement-label">
                 Eu li e aceito os <a href="#">Termos de Uso</a></label>
-            </div>
+                </div>*/}
 
 
           </form>

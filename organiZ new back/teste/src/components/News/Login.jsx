@@ -1,6 +1,7 @@
 import './Login.css'
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Form = () => {
@@ -74,7 +75,6 @@ const Form = () => {
 
           <form id="register-form" name="formulario" className="form" action="" method="post" onSubmit={handleSubmit}>
 
-
             <div className="half-box spacing">
               <label htmlFor="nome" className="form_label">Nome de usuário</label>
               <input type="text" name="login" className="form_input" id="login" placeholder="Digite seu email" required data-required data-min-length="3" data-max-length="40" value={formValues.login} onChange={handleChange} />
@@ -85,14 +85,10 @@ const Form = () => {
               <input type="password" name="senha" className="form_input" id="senha" placeholder="Insira sua senha"
                 data-password-validate data-required value={formValues.senha} onChange={handleChange} />
             </div>
-
-
             <div className="full-box">
-              <input className="botaao" type="submit" value="Entrar" />
-              {/*<Link className = "botaao" type = "submit" to = "/entrar">Entrar</Link>*/}
+              {/*<input className="botaao" type="submit" value="Entrar" />*/}
+              <Link className="botaao" type="submit" to="/entrar">Entrar</Link>
             </div>
-
-
           </form>
         </div>
       </div>
