@@ -54,6 +54,6 @@ def inserir_planos(id, tipo_plano, valor_plano):
 
     cursor.execute(sql, val)
     conexao.commit()
-    print("inserido com sucesso!")
+    print("inserido com sucesso!!")
 
     conexao.close()
