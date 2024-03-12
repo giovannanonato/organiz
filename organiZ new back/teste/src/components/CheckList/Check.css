@@ -33,6 +33,7 @@
   }
   
   #button_check {
+    display: block;
     padding: 10px;
     background-color: #3bab35 ;
     color: white;

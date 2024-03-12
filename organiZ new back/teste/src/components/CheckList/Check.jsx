@@ -70,6 +70,7 @@ const App = () => {
 
         {/*botão para adicionar*/}
         <button onClick={addNote} id = "button_check">Adicionar</button>
+        <button id = "button_check">Alterar</button>
 
            {/*lista de tarefas */}
       <ul className = "ul_check">

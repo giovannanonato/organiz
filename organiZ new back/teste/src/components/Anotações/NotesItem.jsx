@@ -18,7 +18,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
       {/* Texto da tarefa */}
       <p>{todo.text}</p>
       {/* Botão para excluir tarefa */}
-      <button onClick={() => deleteTodo(todo.id)} className = "but-delet">Concluir</button>
+      <button onClick={() => deleteTodo(todo.id)} className = "but-delet">Delete</button>
     </div>
   );
 };
