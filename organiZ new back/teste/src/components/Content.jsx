@@ -8,6 +8,8 @@ import Calendar from '../components/Calendar/Calendar';
 import Reminder from '../components/News/Reminder';
 import Notes from '../components/Anotações/Notes';
 import Check from '../components/CheckList/Check';
+import UpCheck from '../components/Alterar/UpCheck';
+import UpCad from '../components/Alterar/UpCad';
 import { Routes, Route } from 'react-router-dom';
 
 const Content = props => (
@@ -27,7 +29,8 @@ const Content = props => (
             <Route path = "/checkl" element = {<Check />} />
             <Route path = "/notes" element = {<Notes />} />
 
-            
+            <Route path = "/alterarc" element = {<UpCheck />} />
+            <Route path = "/alterarcad" element = {<UpCad />} />
         </Routes>
     </main>
 );

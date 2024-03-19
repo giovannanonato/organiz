@@ -61,12 +61,11 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   #li_check button {
-    background-color: #3bab35;
-    color: #fff;
+    color: #c9302c;
     border: none;
     padding: 8px;
     cursor: pointer;
@@ -74,8 +73,20 @@
     transition: background-color 0.3s;
   }
   
+  #alterarcheck{
+    color: #3bab35;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
   #li_check button:hover {
-    background-color: #c9302c;
+    color: black;
+  }
+
+  #li_check #alterarcheck:hover {
+    color: black;
   }
   
   #div_check{

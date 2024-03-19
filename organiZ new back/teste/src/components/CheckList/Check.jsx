@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header2 from '../News/Header2';
+import { Link } from 'react-router-dom';
 import './Check.css';
 
 
@@ -70,7 +71,6 @@ const App = () => {
 
         {/*botão para adicionar*/}
         <button onClick={addNote} id = "button_check">Adicionar</button>
-        <button id = "button_check">Alterar</button>
 
            {/*lista de tarefas */}
       <ul className = "ul_check">
@@ -79,6 +79,8 @@ const App = () => {
             {note}
 
             {/*botão para excluir a tarefa*/}
+            {/*<button>Alterar</button>*/}
+            <Link type="submit" to="/alterarc" id = 'alterarcheck'>Alterar</Link>
             <button onClick={() => deleteNote(index)}>Delete</button>
           </li>
         ))}

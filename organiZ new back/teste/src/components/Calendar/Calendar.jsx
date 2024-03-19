@@ -94,7 +94,8 @@ const Calendar = () => {
           <li id="li_button"> + <ul>
             <li><Link to = "/todol">To Do List</Link></li>
             <li><Link to = "/checkl">Check List</Link></li>
-            <li><Link to = "/notes">Anotações</Link></li></ul>
+            <li><Link to = "/notes">Anotações</Link></li>
+            <li><Link to = "/alterarcad">Alterar cadastro</Link></li></ul>
           </li>
         </ul>
       </div>

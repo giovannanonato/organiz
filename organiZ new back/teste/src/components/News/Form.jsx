@@ -55,9 +55,7 @@ const Form = () => {
 
   return (
 
-
     <div>
-
       <header className="imagem">
         <img src="img/thumbnail_OrganiZ__1_-removebg-preview.png" alt="logo" height="50px" />
         <h1 className="nome2">Organi<span>Z</span></h1>
@@ -81,7 +79,7 @@ const Form = () => {
 
 
             <div className="half-box spacing">
-              <label htmlFor="nome" className="form_label" id = "espaço_nome">Nome completo</label>
+              <label htmlFor="nome" className="form_label" id="espaço_nome">Nome completo</label>
               <input type="text" name="nome" className="form_input" id="nome" placeholder="Nome completo" required data-required data-min-length="3" data-max-length="40" value={formValues.nome} onChange={handleChange} />
             </div>
 
