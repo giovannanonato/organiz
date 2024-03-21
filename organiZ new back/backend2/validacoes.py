@@ -20,7 +20,6 @@ def validar_data_nascimento(dataNascimento):
 
 
 def validar_email(email):
-    #utilizando uma expressao regular simples para validar o formato do e-mail
     padrao_email = r'^\S+@\S+\.\S+$'
     if not re.match(padrao_email, email):
         return {'erro': True, 'mensagem': 'E-mail inválido.'}
@@ -28,15 +27,27 @@ def validar_email(email):
 
 
 def validar_senha(senha):
-    # Adicione suas próprias regras de validação para senha aqui
-    # Por exemplo, garantir que a senha contenha pelo menos um caractere maiúsculo, um minúsculo, um número e um caractere especial
     if not any(c.isupper() for c in senha) or not any(c.islower() for c in senha) or not any(c.isdigit() for c in senha) or not any(c in "!@#$%^&*()-_=+[]{}|;:'\",.<>/?`~" for c in senha):
         return {'erro': True, 'mensagem': 'A senha deve atender a requisitos específicos.'}
     return {'erro': False, 'mensagem': ''}
 
 
 def confirmar_senha(senha, confirma):
-
     if senha != confirma:
         return {'erro': True, 'mensagem': 'As senhas devem ser iguais'}
     return {'erro': False, 'mensagem': ''}
+
+
+# def verificar_login(email, senha):
+    # conex = conexao.conectar()
+    # cursor = conex.cursor()
+
+    # cursor.execute("SELECT COUNT(*) FROM cadastros WHERE EMAIL = %s AND SENHA_CAD = %s", (email, senha))
+    # resultado = cursor.fetchone()[0]
+
+    # conex.close()
+
+    # if resultado > 0:
+    #   return {'autenticado': True, 'mensagem': 'Login autenticado com sucesso.'}
+    # else:
+    #   return {'autenticado': False, 'mensagem': 'Email ou senha incorretos.'}

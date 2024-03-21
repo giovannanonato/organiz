@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-#from processamento import processar_dados  # Importe a função processar_dados
+from processamento import processar_dados
+
+# from processamento import processar_dados  # Importe a função processar_dados
 
 app = Flask(__name__)
 CORS(app)  # Permita solicitações CORS
@@ -9,8 +11,8 @@ CORS(app)  # Permita solicitações CORS
 @app.route('/receber-dados', methods=['POST'])
 def receber_dados():
     dados = request.json
-    ret = dados #processar_dados(dados)  # Chame a função processar_dados
-    
+    ret = dados  # processar_dados(dados)  # Chame a função processar_dados
+    ret = processar_dados(dados)
     print('************************************************************************\n')
     print(ret)
     print('************************************************************************\n')

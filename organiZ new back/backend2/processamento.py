@@ -1,15 +1,26 @@
-from gravar_bd import inserir_cadastro
+from gravar_bd import (
+    inserir_cadastro, 
+    verificar_login)
 from validacoes import (
     validar_nome,
     validar_data_nascimento,
     validar_email,
     validar_senha,
     confirmar_senha
+
 )
 
-
-
 def processar_dados(dados):
+
+    if dados.get('nome') != None:
+        ret= processar_dados_cad(dados)
+        return ret 
+    elif dados.get('email') != None:
+        ret= processar_dados_log(dados) 
+        return ret 
+
+
+def processar_dados_cad(dados):
     # Função para processar os dados recebidos do Flask
     # Retorna os dados processados
     dados_processados = dados
@@ -27,34 +38,52 @@ def processar_dados(dados):
     mensagens_erro = []
 
     # Chama a função para gravar os dados em um arquivo
-    if (dados_processados.get('login') == None):
-        
-        mensagens_erro.append(validar_nome(dados.get('nome', '')))
-        mensagens_erro.append(validar_data_nascimento(dados.get('dataNascimento', '')))
-        mensagens_erro.append(validar_email(dados.get('email', '')))
-        mensagens_erro.append(validar_senha(dados.get('senha', '')))
-        mensagens_erro.append(confirmar_senha(dados.get('senha', ''),dados.get('confirma', '')))
+      
+    mensagens_erro.append(validar_nome(dados.get('nome', '')))
+    mensagens_erro.append(validar_data_nascimento(dados.get('dataNascimento', '')))
+    mensagens_erro.append(validar_email(dados.get('email', '')))
+    mensagens_erro.append(validar_senha(dados.get('senha', '')))
+    mensagens_erro.append(confirmar_senha(dados.get('senha', ''),dados.get('confirma', '')))
 
+
+    # Remove mensagens de erro vazias
+    mensagens_erro = [msg for msg in mensagens_erro if msg['erro']]
+
+    print(mensagens_erro)
+
+    if mensagens_erro:
+        return {'erro': True, 'mensagens': mensagens_erro}
     else:
+        inserir_cadastro(lista)
+        # Retorna os dados processados
+        return {'erro': False, 'mensagem': 'Dados Processados com Sucesso!'}
+    
 
-        mensagens_erro.append(validar_nome(dados.get('login', '')))
-        mensagens_erro.append(validar_senha(dados.get('senha', '')))
+def processar_dados_log(dados):
+    # Função para processar os dados recebidos do Flask
+    # Retorna os dados processados
+    dados_processados = dados
+
+    lista= []
+
+    lista.append(dados_processados.get('login'))
+    lista.append(dados_processados.get('senha_login'))
+    lista.append('1')
+    
+    mensagens_erro = []
+
+    # Chama a função para gravar os dados em um arquivo
+  
+    mensagens_erro.append(validar_email(dados.get('email', '')))
+    mensagens_erro.append(validar_senha(dados.get('senha', '')))
 
         # Remove mensagens de erro vazias
     mensagens_erro = [msg for msg in mensagens_erro if msg['erro']]
 
     print(mensagens_erro)
 
-  
     if mensagens_erro:
         return {'erro': True, 'mensagens': mensagens_erro}
     else:
-        if (dados_processados.get('login') == None):
-            #gravar_em_arquivo(dados_processados)
-            inserir_cadastro(lista)
-        else:
-            inserir_cadastro(lista)
-        # Retorna os dados processados
-        return {'erro': False, 'mensagem': 'Dados Processados com Sucesso!'}
-    
-
+        dados_log = verificar_login((dados.get('email', '')), (dados.get('senha', '')))
+        return {'erro': False, 'mensagens': dados_log}

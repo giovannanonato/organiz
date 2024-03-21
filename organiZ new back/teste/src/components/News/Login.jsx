@@ -6,8 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Form = () => {
   const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [formValues, setFormValues] = useState({
-    login: '',
+    email: '',
     senha: '',
   });
 
@@ -36,20 +38,20 @@ const Form = () => {
       const resultado = await resposta.json();
 
       if (resultado.erro) {
-        // Exibe mensagens de erro no console.log ou em algum local visível
-        console.error('Erro no servidor:', resultado.mensagens);
-
-        // Atualiza o estado com as mensagens de erro para exibição no formulário
+        console.error('erro no servidor: ', resultado.mensagens);
         setMensagensErro(resultado.mensagens);
+        onLogin(resultado.username);
       } else {
-        // Dados foram processados com sucesso
-        console.log('Dados processados com sucesso!', resposta);
-
+        console.log('dados processados com sucesso!', resultado);
+        localStorage.setItem('username', resultado.mensagens[1]);
+        localStorage.setItem('ID', resultado.mensagens[0]);
         navigate('/entrar')
       }
-    } catch (error) {
-      console.error('Erro ao enviar dados:', error);
-    }
+        
+
+} catch (error) {
+    console.error('Erro ao enviar dados:', error);
+}
   };
 
   return (
@@ -77,17 +79,16 @@ const Form = () => {
 
             <div className="half-box spacing">
               <label htmlFor="nome" className="form_label">Nome de usuário</label>
-              <input type="text" name="login" className="form_input" id="login" placeholder="Digite seu email" required data-required data-min-length="3" data-max-length="40" value={formValues.login} onChange={handleChange} />
+              <input type="text" name="email" className="form_input" id="email" placeholder="Digite seu email" required data-required data-min-length="3" data-max-length="40" value={formValues.email} onChange={handleChange} />
             </div>
-
             <div className="half-box spacing">
               <label htmlFor="lastname" className="form_label">Insira sua senha</label>
               <input type="password" name="senha" className="form_input" id="senha" placeholder="Insira sua senha"
                 data-password-validate data-required value={formValues.senha} onChange={handleChange} />
             </div>
             <div className="full-box">
-              {/*<input className="botaao" type="submit" value="Entrar" />*/}
-              <Link className="botaao" type="submit" to="/entrar">Entrar</Link>
+            <input className="botaao" type="submit" value="Entrar" />
+              {/*<Link className="botaao" type="submit" to="/entrar">Entrar</Link>*/}
             </div>
           </form>
         </div>

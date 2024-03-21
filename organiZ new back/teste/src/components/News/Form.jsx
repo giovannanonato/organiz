@@ -2,6 +2,7 @@ import './Login.css'
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Form = () => {
   const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
@@ -22,6 +23,9 @@ const Form = () => {
 
   const [mensagensErro, setMensagensErro] = useState([]);
 
+  {/*
+
+*/}
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -42,6 +46,7 @@ const Form = () => {
 
         // Atualiza o estado com as mensagens de erro para exibição no formulário
         setMensagensErro(resultado.mensagens);
+
       } else {
         // Dados foram processados com sucesso
         console.log('Dados processados com sucesso!', resposta);
@@ -52,6 +57,7 @@ const Form = () => {
       console.error('Erro ao enviar dados:', error);
     }
   };
+
 
   return (
 
@@ -127,6 +133,6 @@ const Form = () => {
       <script src="js/script.js"></script>
     </div>
   )
-}
 
+}
 export default Form;

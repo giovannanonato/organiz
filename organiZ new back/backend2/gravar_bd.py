@@ -3,7 +3,6 @@ import conexao
 def inserir_cadastro(dados_processados):
     conex = conexao.conectar()
     cursor = conex.cursor()
-
     sql = "INSERT INTO cadastros (NOME_CAD, DATA_NASC, EMAIL, SENHA_CAD, CONFIR_SENHA, ID_PLANOS) VALUES (%s, %s, %s, %s, %s, %s)"
     val = (dados_processados)
     print(val)
@@ -11,7 +10,7 @@ def inserir_cadastro(dados_processados):
     conex.commit()
     print("inserido com sucesso!")
     conex.close()
-
+    return
 
 def inserir_todolist(id, titulo, data_todo, horario, classificacao, descricao, id_cadastro):
     cursor = conexao.cursor()
@@ -57,3 +56,17 @@ def inserir_planos(id, tipo_plano, valor_plano):
     print("inserido com sucesso!!")
 
     conexao.close()
+
+
+def verificar_login(email, senha):
+    conex = conexao.conectar()
+    cursor = conex.cursor()
+
+    sql = "SELECT ID, NOME_CAD, EMAIL FROM cadastros WHERE EMAIL = %s AND SENHA_CAD = %s"
+    val = (email, senha)
+
+    cursor.execute(sql, val)
+    login = cursor.fetchone()
+    conex.close()
+    return login
+
