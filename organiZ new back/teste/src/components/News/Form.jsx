@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Form = () => {
+
+
+
   const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     nome: '',
@@ -110,6 +113,11 @@ const Form = () => {
               <label htmlFor="passconfirmation" className="form_label">Confirme sua senha</label>
               <input type="password" name="confirma" className="form_input" id="confirma" placeholder="Digite sua senha"
                 data-equal="password" value={formValues.confirma} onChange={handleChange} />
+            </div>
+
+            <div className="photocss" >
+              <label htmlFor="photo" className="form_label">Adicione uma foto</label>
+              <img src="img/photogreen2.jpg" alt="fotoperfil" className="photoperfil" />
             </div>
 
 

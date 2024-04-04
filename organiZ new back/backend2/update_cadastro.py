@@ -109,5 +109,4 @@ if pedir == 5:
     novo_plano = int(input("Insira o ID do novo plano (gratuito: 1, mensal: 2, anual: 3): "))
     atualizar_plano(id_plano, novo_plano)
 
-#else:
-#    print("Digite uma opção válida, execute novamente.")
+  

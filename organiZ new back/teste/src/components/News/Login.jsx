@@ -36,15 +36,18 @@ const Form = () => {
       });
 
       const resultado = await resposta.json();
-
+      console.log(resultado)
       if (resultado.erro) {
         console.error('erro no servidor: ', resultado.mensagens);
         setMensagensErro(resultado.mensagens);
         onLogin(resultado.username);
       } else {
-        console.log('dados processados com sucesso!', resultado);
+        
+        localStorage.setItem('date', resultado.mensagens[2]);
         localStorage.setItem('username', resultado.mensagens[1]);
+        localStorage.setItem('email', resultado.mensagens[3]);
         localStorage.setItem('ID', resultado.mensagens[0]);
+
         navigate('/entrar')
       }
         
